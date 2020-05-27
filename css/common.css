@@ -40,8 +40,8 @@ a {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-
   margin: 0 auto;
+
   /* outline: 2px solid tomato; */
 }
 /* Header */
@@ -109,6 +109,7 @@ a {
   margin-left: 50px;
 }
 .auth-nav .link {
+  display: inline-flex;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -118,6 +119,24 @@ a {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+}
+.auth-nav .link::before {
+  display: inline-flex;
+  align-items: center;
+  content: '';
+  margin-right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.auth-nav .link.mailto::before {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/mail.svg');
+}
+.auth-nav .link.telto::before {
+  width: 10px;
+  height: 16px;
+  background-image: url('../images/tel.svg');
 }
 /* Section */
 .section {
@@ -151,7 +170,38 @@ a {
 .attach {
   display: flex;
   justify-content: space-between;
+  width: 208px;
 }
+.attach .link {
+  display: inline-block;
+}
+.attach .link::before {
+  content: '';
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.attach .link:hover::before,
+.attach .link:focus::before {
+  background-color: var(--accent-color);
+}
+.attach .link.insta::before {
+  background-image: url(../images/instagramw.svg);
+}
+.attach .link.twit::before {
+  background-image: url(../images/twitterw.svg);
+}
+.attach .link.face::before {
+  background-image: url(../images/facebookw.svg);
+}
+.attach .link.linkin::before {
+  background-image: url(../images/linkedinw.svg);
+}
+
 .send-container {
   width: 482px;
   margin-left: 100px;
@@ -176,13 +226,7 @@ a {
   font-size: 14px;
   line-height: 1.7;
 }
-.underside .link {
-  color: rgba(255, 255, 255, 0.1);
-}
-.underside .link:hover,
-.underside .link:focus {
-  color: var(--accent-color);
-}
+
 .underside .location {
   margin-bottom: 9px;
 }
