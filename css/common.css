@@ -175,9 +175,8 @@ a {
 .attach .link {
   display: inline-block;
 }
-.attach .link::before {
-  content: '';
-  display: inline-flex;
+.attach .link {
+  display: block;
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
@@ -185,20 +184,20 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
-.attach .link:hover::before,
-.attach .link:focus::before {
+.attach .link:hover,
+.attach .link:focus {
   background-color: var(--accent-color);
 }
-.attach .link.insta::before {
+.attach .link.insta {
   background-image: url(../images/instagramw.svg);
 }
-.attach .link.twit::before {
+.attach .link.twit {
   background-image: url(../images/twitterw.svg);
 }
-.attach .link.face::before {
+.attach .link.face {
   background-image: url(../images/facebookw.svg);
 }
-.attach .link.linkin::before {
+.attach .link.linkin {
   background-image: url(../images/linkedinw.svg);
 }
 
