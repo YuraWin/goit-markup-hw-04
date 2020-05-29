@@ -110,8 +110,10 @@
 .job-list {
   display: flex;
 }
-.job-list .item {
+.job-list > .item {
   width: 370px;
+  overflow: hidden;
+  border-radius: 4px;
 }
 .job-list .item + .item {
   margin-left: 30px;
@@ -133,13 +135,15 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   background-color: #ffffff;
+  overflow: hidden;
 }
 .team-list > .item + .item {
   margin-left: 30px;
 }
 
-.team-list img {
+.team-list .fototeam {
   display: block;
+  margin-bottom: 30px;
 }
 .team-list .title {
   margin-top: 0;
@@ -157,9 +161,6 @@
   line-height: 1.18;
 }
 
-.team-list .fototeam {
-  margin-bottom: 30px;
-}
 .soclink {
   display: flex;
   justify-content: center;

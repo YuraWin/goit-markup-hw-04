@@ -33,6 +33,7 @@
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   border-radius: 5px;
+  overflow: hidden;
 }
 .works-card .item:nth-child(3n) {
   margin-right: 0;
