@@ -109,7 +109,8 @@ a {
   margin-left: 50px;
 }
 .auth-nav .link {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -120,7 +121,11 @@ a {
 .auth-nav .link:focus {
   color: var(--accent-color);
 }
-.auth-nav .link::before {
+.auth-nav-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+/* .auth-nav .link::before {
   display: inline-flex;
   align-items: center;
   content: '';
@@ -137,7 +142,8 @@ a {
   width: 10px;
   height: 16px;
   background-image: url('../images/tel.svg');
-}
+} */
+
 /* Section */
 .section {
   padding-top: 94px;
@@ -152,7 +158,7 @@ a {
   background-color: #2f303a;
   color: #ffffff;
 }
-/* Logo */
+/* Logo footer*/
 .underside-container {
   display: flex;
   align-items: baseline;
@@ -163,42 +169,43 @@ a {
 .logo-container {
   min-width: 180px;
 }
+
+/* Global container for soclink*/
 .soc-container {
   width: 207px;
   margin-left: auto;
 }
-.attach {
+.soclink {
   display: flex;
-  justify-content: space-between;
-  width: 208px;
+  justify-content: center;
+  margin-bottom: 24px;
 }
-.attach .link {
-  display: inline-block;
+.soclink > .item:not(:last-child) {
+  margin-right: 10px;
 }
-.attach .link {
-  display: block;
+.soclink-iconset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: #afb1b8;
 }
-.attach .link:hover,
-.attach .link:focus {
+.soclink-iconset:hover,
+.soclink-iconset:focus {
   background-color: var(--accent-color);
+  color: #ffffff;
 }
-.attach .link.insta {
-  background-image: url(../images/instagramw.svg);
+.soclink-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
-.attach .link.twit {
-  background-image: url(../images/twitterw.svg);
-}
-.attach .link.face {
-  background-image: url(../images/facebookw.svg);
-}
-.attach .link.linkin {
-  background-image: url(../images/linkedinw.svg);
+/* Setting soclink for footer */
+.footersoclink {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .send-container {

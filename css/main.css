@@ -54,7 +54,7 @@
 .feature-list .item {
   width: 270px;
 }
-.feature-list .item::before {
+/* .feature-list .item::before {
   content: '';
   display: inline-flex;
   width: 270px;
@@ -77,6 +77,20 @@
 }
 .feature-list .item:nth-child(4)::before {
   background-image: url(../images/astronaut.svg);
+} */
+.feature-iconset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+.feature-icon {
+  height: 70px;
+  width: 70px;
 }
 .feature-list .title {
   margin-top: 0;
@@ -161,48 +175,31 @@
   line-height: 1.18;
 }
 
-.soclink {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-.soclink > .item:not(:last-child) {
-  margin-right: 10px;
-}
-.soclink .link {
-  display: inline-block;
-}
-.soclink .link {
-  display: block;
-  width: 44px;
-  height: 44px;
-  /* background: #f5f4fa; */
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.soclink .link:hover,
-.soclink .link:focus {
-  background-color: var(--accent-color);
-}
-.soclink .link.insta {
-  background-image: url(../images/instagram.svg);
-}
-.soclink .link.twit {
-  background-image: url(../images/twitter.svg);
-}
-.soclink .link.face {
-  background-image: url(../images/facebook.svg);
-}
-.soclink .link.linkin {
-  background-image: url(../images/linkedin.svg);
-}
-
 /* Clients */
 .clients {
   display: flex;
 }
-.clients .item {
+.clients .item + .item {
+  margin-left: 30px;
+}
+.clients-iconset {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+  border: 1px solid;
+  border-radius: 4px;
+}
+.clients-iconset:hover,
+.clients-iconset:focus {
+  color: var(--accent-color);
+}
+.clients-icon {
+  fill: currentcolor;
+}
+/* .clients .item {
   display: flex;
   width: 170px;
   height: 90px;
@@ -210,11 +207,8 @@
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
-.clients .item + .item {
-  margin-left: 30px;
-}
-.section .clients-img:hover,
+} */
+/* .section .clients-img:hover,
 .section .clients-img:focus {
   background-color: var(--accent-color);
-}
+} */
