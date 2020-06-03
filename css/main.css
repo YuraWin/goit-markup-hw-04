@@ -136,6 +136,9 @@
 .job-list img {
   display: block;
 }
+.job-list .item {
+  position: relative;
+}
 /* Our team */
 .teamsection {
   background-color: #f5f4fa;
